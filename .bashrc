@@ -24,6 +24,9 @@ fi
 # Set default editor
 EDITOR=vim
 
+# User directory installs
+PATH=$PATH:~/bin/
+
 # ls: show colors and symbols
 alias ls='ls -F --color=auto'
 # ls: shortcut
