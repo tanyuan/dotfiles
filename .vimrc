@@ -100,11 +100,12 @@ map <C-_> <plug>NERDCommenterToggle
 " Crtl-\ is mapped to plugin closetag.vim by me to solve conflict (default C-_)
 
 " CUSTOMIZATION KEY
-
 " Some keys left for remapping: , \ Space
 
 " Switch to next buffer
 nmap \ :bn<CR>
+" Toggle relative line number for fast jumping
+nmap , :set relativenumber!<CR>
 
 " LEADER KEY
 " This is where we can map any key we like without worrying conflicts with Vim's default
