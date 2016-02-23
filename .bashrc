@@ -10,8 +10,21 @@
 #                 |___/
 
 # Custom Command Prompt
-# > user@machine: directory $
-PS1='\[\e[0;36m\]> \u@\h: \W $\[\e[m\] '
+# Get git branch information (cross machine)
+# Show * if dirty
+function git_dirty {
+    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+}
+# Show ^ if stash
+function git_stash {
+    [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo "^"
+}
+# Combine with git branch name
+function git_branch {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(git_dirty)$(git_stash)/"
+}
+# > user@machine: directory (branch*^)$
+PS1='\[\e[0;36m\]> \u@\h: \W ($(git_branch))$\[\e[m\] '
 
 # Update terminal emulator window title
 if [[ $TERM == xterm* ]]; then
