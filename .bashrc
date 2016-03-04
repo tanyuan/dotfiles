@@ -24,7 +24,9 @@ function git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(git_dirty)$(git_stash)/"
 }
 # > user@machine: directory (branch*^)$
-PS1='\[\e[0;36m\]> \u@\h: \W ($(git_branch))$\[\e[m\] '
+PS1='\[\e[0;36m\]> \u@\h: \w ($(git_branch))$\[\e[m\] '
+# Trim prompt directory to 3 levels
+PROMPT_DIRTRIM=3
 
 # Update terminal emulator window title
 if [[ $TERM == xterm* ]]; then
