@@ -35,11 +35,29 @@ if [[ $TERM == xterm* ]]; then
 fi
 
 # Set default editor
-EDITOR=vim
+export EDITOR=vim
+export VISUAL=vim
 
 # User directory installs
 PATH=$PATH:~/bin/
 
+# Update window size after every command
+shopt -s checkwinsize
+
+# History options
+# Append history instead of rewriting it
+shopt -s histappend
+# Store history immediately rather than session ends
+PROMPT_COMMAND='history -a'
+# Ignore duplicates and commands start with space
+HISTCONTROL=ignoreboth
+# Ignore specific commands
+HISTIGNORE='ls:l:ll:f:bg:fg:history'
+# Larger history file
+HISTFILESIZE=100000
+HISTSIZE=100000
+
+# Basic aliases
 # ls: show colors and symbols
 alias ls='ls -F --color=auto'
 # ls: shortcut
