@@ -10,6 +10,8 @@
 #                 |___/
 
 # Custom Command Prompt
+# Show git branch in prompt
+source ~/.git-prompt.sh
 # Get git branch information (cross machine)
 # Show * if dirty
 function git_dirty {
@@ -19,12 +21,8 @@ function git_dirty {
 function git_stash {
     [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo "^"
 }
-# Combine with git branch name
-function git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(git_dirty)$(git_stash)/"
-}
 # > user@machine: directory (branch*^)$
-PS1='\[\e[0;36m\]> \u@\h: \w ($(git_branch))$\[\e[m\] '
+PS1='\[\e[0;36m\]> \u@\h: \w $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
 # Trim prompt directory to 2 levels
 PROMPT_DIRTRIM=2
 
@@ -73,6 +71,11 @@ alias rm='rm -i'
 alias grep='grep --color=auto -n'
 # Run last command again with sudo
 alias please='sudo `fc -ln -1`'
+
+# Maunally use trash can at ~/.Trash/
+trash() {
+    mv $1 ~/.Trash/
+}
 
 # Add custom bash aliases at ~/.bash_aliases
 if [ -f ~/.bash_aliases ]; then
