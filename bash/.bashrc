@@ -25,8 +25,8 @@ function git_branch {
 }
 # > user@machine: directory (branch*^)$
 PS1='\[\e[0;36m\]> \u@\h: \w ($(git_branch))$\[\e[m\] '
-# Trim prompt directory to 3 levels
-PROMPT_DIRTRIM=3
+# Trim prompt directory to 2 levels
+PROMPT_DIRTRIM=2
 
 # Update terminal emulator window title
 if [[ $TERM == xterm* ]]; then

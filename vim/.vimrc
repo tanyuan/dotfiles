@@ -41,6 +41,11 @@ set clipboard=unnamedplus
 " Read tags from file 'tags' and search all the way to root
 set tags+=tags;/
 
+" Set smart line break: not to break words
+set linebreak
+" Smart wrapping according to indentation 
+set breakindent
+
 " Indentation
 set autoindent " Auto indention based on the line above
 set expandtab " Use spaces instead of tabs
@@ -109,7 +114,8 @@ nmap , :set relativenumber!<CR>
 
 " LEADER KEY
 " This is where we can map any key we like without worrying conflicts with Vim's default
-" Leader-c is used by plugin NERD Commenter
+" Leader c is used by plugin NERD Commenter
+" Leader d is used by plugin DrawIt
 
 " Map Space to Leader
 let mapleader=" "
@@ -131,10 +137,28 @@ nmap <Leader>v :vs<CR>
 nmap <Leader>p o<Esc>p
 " Enter new line with additional blank line below
 nmap <Leader><CR> o<Esc>O
-" CtrlP plugin, use this instead of :e for fuzzy search
-nmap <Leader>f :CtrlP<CR>
+" Move lines up and down
+nnoremap <Leader>j :m .+1<CR>==
+nnoremap <Leader>k :m .-2<CR>==
+vnoremap <Leader>j :m '>+1<CR>gv=gv
+vnoremap <Leader>k :m '<-2<CR>gv=gv
 " Insert Bash script beginning
 nmap <Leader>b :r ~/Templates/bash.sh<CR>ggdd
+
+" fugitive git bindings
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gl :Glog<CR>
+nnoremap <Leader>gc :Gcommit<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>ge :Gedit<Space>
+nnoremap <Leader>gr :Gread<CR>
+nnoremap <Leader>gw :Gwrite<CR><CR>
+nnoremap <Leader>gp :Ggrep<Space>
+nnoremap <Leader>gm :Gmove<Space>
+nnoremap <Leader>gb :Git branch<Space>
+nnoremap <Leader>go :Git checkout<Space>
+nnoremap <Leader>gps :Dispatch! git push<CR>
+nnoremap <Leader>gpl :Dispatch! git pull<CR>
 
 " Remember last cursor position
 augroup resCur
@@ -169,8 +193,27 @@ if v:version >= 700
     autocmd BufEnter * call AutoRestoreWinView()
 endif
 
+" For the most accurate highlighting (for mixed code in HTML) but slowest
+autocmd BufEnter * :syntax sync fromstart
+
+" MARKDOWN
 " Use GitHub-flavored Markdown syntax highlighting by default for .md files
 augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
+" Use 2 space indent 
+autocmd FileType ghmarkdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" Markdown auto folding by headers
+function! MarkdownLevel()
+    let h = matchstr(getline(v:lnum), '^#\+')
+        if empty(h)
+            return "="
+        else
+            return ">" . len(h)
+        endif
+endfunction
+au BufEnter *.md setlocal foldexpr=MarkdownLevel()  
+au BufEnter *.md setlocal foldmethod=expr 
+" Expand folds when open files 
+au BufEnter *.md setlocal foldlevel=20
