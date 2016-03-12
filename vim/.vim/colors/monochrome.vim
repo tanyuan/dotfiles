@@ -32,7 +32,7 @@ hi Type guifg=White ctermfg=15 guibg=Black ctermbg=NONE gui=bold cterm=bold term
 hi Function guifg=White ctermfg=15 guibg=Black ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi Identifier guifg=LightGray ctermfg=252 guibg=Black ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi Special guifg=LightGray ctermfg=252 guibg=Black ctermbg=NONE gui=NONE cterm=NONE term=NONE
-hi MatchParen guifg=Black ctermfg=16 guibg=LightGray ctermbg=252 gui=NONE cterm=NONE term=NONE
+hi MatchParen guifg=Black ctermfg=16 guibg=LightGray ctermbg=67 gui=NONE cterm=NONE term=NONE
 hi rubyConstant guifg=LightGray ctermfg=252 guibg=Black ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi rubySharpBang guifg=#737373 ctermfg=243 guibg=Black ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi rubyStringDelimiter guifg=#778899 ctermfg=67 guibg=Black ctermbg=NONE gui=NONE cterm=NONE term=NONE
