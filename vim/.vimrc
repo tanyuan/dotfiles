@@ -17,7 +17,7 @@ filetype plugin on
 syntax on
 
 " Use color scheme from ~/.vim/color/
-colorscheme janah
+colorscheme monochrome
 
 " Show the keystrokes being entered in the screen
 set showcmd
@@ -37,6 +37,14 @@ set mouse=a
 
 " Sync to system clipboard
 set clipboard=unnamedplus
+
+" Where to store swap (.swp) files, rather than beside the file
+" // will save the full path name to ensure uniqueness
+set directory=~/.vim/swap//
+" Save undo history after file closed
+set undofile
+" Where to store undo history, rather than beside the file
+set undodir=~/.vim/undo//
 
 " Read tags from file 'tags' and search all the way to root
 set tags+=tags;/

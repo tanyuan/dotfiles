@@ -1,0 +1,16 @@
+# Vim
+vim/.vim/swap/*
+vim/.vim/undo/*
+vim/.vim/view/*
+
+# Emacs
+emacs/.emacs.d/url/*
+emacs/.emacs.d/auto-save-list/*
+emacs/.emacs.d/backup/*
+emacs/.emacs.d/saved-places
+emacs/.emacs.d/bookmarks
+emacs/.emacs.d/image-dired/*
+emacs/.emacs.d/projectile*
+
+# Ranger
+ranger/.config/ranger/history

@@ -1,11 +1,20 @@
 # dotfiles
 
-Setup working envionment on a remote machine (SSH).
+```
+  ________________________________________
+/ The most beautiful things in the world \
+| cannot be seen or touched, they are    |
+\ felt with the heart.                   /
+ ----------------------------------------
+   \
+    \              ....       
+           ........    .      
+          .            .      
+         .             .      
+.........              .......
+..............................
+```
 
-Make **symbolic links** (`ln -s`) to home directory `~`.
+Managed using GNU Stow.
 
-1. **SSH**: SSH key under `.ssh/` to enable login without password.
-2. **Bash**: `.bashrc` with machine specific aliases in `.bash_aliases`.
-3. **Tmux**: `.tmux.conf`.
-4. **Vim**: `.vimrc`, `.vim/`.
-5. **Git**: set `user.name`, `user.email` and `core.editor`.
+My Gist: [How to use GNU Stow](https://gist.github.com/tanyuan/d8ac86407893699e0d2b).
