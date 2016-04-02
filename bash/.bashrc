@@ -71,9 +71,7 @@ HISTSIZE=100000
 # Basic aliases
 
 # ls: show colors and symbols
-alias ls='ls -F --color=auto'
-# ls: shortcut
-alias l='ls'
+alias l='ls -F --color=auto'
 # ls: show details with hidden files
 alias ll='ls -alh'
 # Ask before remove (disable by -f force)
