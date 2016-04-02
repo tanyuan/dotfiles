@@ -2,6 +2,7 @@
 vim/.vim/swap/*
 vim/.vim/undo/*
 vim/.vim/view/*
+vim/.vim/.netrwhist
 
 # Emacs
 emacs/.emacs.d/url/*
