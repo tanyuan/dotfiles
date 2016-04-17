@@ -65,21 +65,6 @@ set softtabstop=4 " Makes backspace treat 4 spaces like a tab
 " `nore` means no recursive
 " always use nnoremap instead of nmap
 
-" ESCAPE KEY
-" Always return to normal mode after insertion.
-
-" Map Tab to Esc
-" like the original Terminal ADM3A keyboard
-nnoremap <Tab> <Esc>
-vnoremap <Tab> <Esc>gV
-onoremap <Tab> <Esc>
-inoremap <Tab> <Esc>`^
-" You can avoid tabs by using indents :
-"   Normal Mode : <<, >> 
-"   Insert Mode : Ctrl-d, Ctrl-t 
-" I lose Ctrl-i together because Vim treat Tab as Ctrl-i
-" Therefore I cannot go forward in position history
-
 " Single tap to trigger command-line
 nnoremap ; :
 vnoremap ; :
