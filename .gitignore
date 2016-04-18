@@ -5,6 +5,7 @@ vim/.vim/view/*
 vim/.vim/.netrwhist
 
 # Emacs
+emacs/.emacs.d/elpa/archives/*
 emacs/.emacs.d/url/*
 emacs/.emacs.d/auto-save-list/*
 emacs/.emacs.d/backup/*
