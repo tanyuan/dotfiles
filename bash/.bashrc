@@ -9,35 +9,6 @@
 #  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 #                 |___/
 
-# Custom Command Prompt
-# Get git dirty and stash information to use in prompt
-function git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit"* ]] && echo "*"
-}
-function git_stash {
-  [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo "^"
-}
-
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    # Linux Only
-    # Show git branch in prompt
-    source /usr/share/git/completion/git-prompt.sh
-    # Git command completion
-    source /usr/share/git/completion/git-completion.bash
-    # > directory (git-branch*^)$
-    PS1='\[\e[0;32m\]> \w $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
-    # Trim prompt directory to 2 levels
-    PROMPT_DIRTRIM=2
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    # Mac OS Only
-    # Show git branch in prompt
-    source /usr/local/git/contrib/completion/git-prompt.sh
-    # Git command completion
-    source /usr/local/git/contrib/completion/git-completion.bash
-    # > directory (git-branch*^)$
-    PS1='\[\e[0;32m\]> \W $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
-fi
-
 # Default editor
 export EDITOR=vim
 export VISUAL=vim
@@ -96,6 +67,11 @@ alias gcc='gcc -fdiagnostics-color'
 alias d='cd ~/Desktop'
 # Go to Dropbox
 alias D='cd ~/Dropbox'
+
+# Bash Prompt
+if [ -f ~/.bash_prompt ]; then
+    source ~/.bash_prompt
+fi
 
 # Add custom bash aliases at ~/.bash_aliases
 if [ -f ~/.bash_aliases ]; then
