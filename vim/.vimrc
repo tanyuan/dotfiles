@@ -52,7 +52,8 @@ set tags+=tags;/
 " Set smart line break: not to break words
 set linebreak
 " Smart wrapping according to indentation 
-set breakindent
+" Does not work on Mac
+"set breakindent
 
 " Indentation
 set autoindent " Auto indention based on the line above
