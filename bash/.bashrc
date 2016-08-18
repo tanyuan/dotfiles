@@ -34,9 +34,6 @@ HISTSIZE=100000
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux Only
-    shopt -s checkwinsize
-    # Open terminal new tab/window in the same directory
-    . /etc/profile.d/vte.sh
     # ls: show colors and symbols
     alias l='ls -F --color=auto'
 elif [[ "$OSTYPE" == "darwin"* ]]; then

@@ -20,3 +20,8 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\[\e[0;32m\]> \w $(__git_ps1 "(%s)")$\[\e[m\] '
 # Trim prompt directory to 2 levels
 PROMPT_DIRTRIM=2
+
+# Always check window size
+shopt -s checkwinsize
+# Open terminal new tab/window in the same directory
+. /etc/profile.d/vte.sh
