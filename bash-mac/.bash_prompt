@@ -9,19 +9,12 @@
 #  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 #                 |___/
 
-# Custom Command Prompt
-# Get git dirty and stash information to use in prompt
-function git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit"* ]] && echo "*"
-}
-function git_stash {
-  [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo "^"
-}
-
 # Show git branch in prompt
 source ~/.git-prompt.sh
 # Git command completion
 source ~/.git-completion.bash
 
 # > directory (git-branch*^)$
-PS1='\[\e[0;32m\]> \W $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
+#PS1='\[\e[0;32m\]> \w $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
+export GIT_PS1_SHOWDIRTYSTATE=1
+PS1='\[\e[0;32m\]> \W $(__git_ps1 "(%s)")$\[\e[m\] '
