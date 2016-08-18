@@ -12,7 +12,7 @@
 # Custom Command Prompt
 # Get git dirty and stash information to use in prompt
 function git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit"* ]] && echo "*"
 }
 function git_stash {
   [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo "^"
