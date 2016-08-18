@@ -26,7 +26,7 @@ For Linux and Mac.
 
 ## How to deploy
 
-Dotfiles are managed using **GNU Stow**. My Gist: [How to use GNU Stow](https://gist.github.com/tanyuan/d8ac86407893699e0d2b).
+Dotfiles are managed using **GNU Stow**. [How to use GNU Stow](https://gist.github.com/tanyuan/d8ac86407893699e0d2b).
 
 Install one directory at a time:
 
@@ -36,6 +36,8 @@ cd ~/dotfiles
 stow bash
 ```
 
-## Keyboard settings
+## More
 
-For Vim and Emacs: My Gist: [Smart Caps Lock](https://gist.github.com/tanyuan/55bca522bf50363ae4573d4bdcf06e2e).
+* Trash can in command line: install `trash-cli` or [create an alias](https://gist.github.com/tanyuan/804ac5a568ab1f56093054147b553767). 
+
+* [Smart Caps Lock for Vim and Emacs](https://gist.github.com/tanyuan/55bca522bf50363ae4573d4bdcf06e2e).
