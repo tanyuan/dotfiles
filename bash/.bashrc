@@ -49,6 +49,8 @@ alias ll='ls -alh'
 alias rm='rm -i'
 # Run last command again with sudo
 alias please='sudo `fc -ln -1`'
+# vim
+alias vi='vim'
 # grep: turn on color and line number
 alias grep='grep --color=auto -n'
 # pdfgrep: show page number 
