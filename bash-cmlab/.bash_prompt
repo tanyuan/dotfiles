@@ -22,8 +22,8 @@ art() {
 EOT
 }
 
-# Only if not in TMUX
-if [ -z "$TMUX" ]; then
+# Only if in SSH session (so not break SCP) and not in TMUX
+if [ "$SSH_TTY" ] && [ -z "$TMUX" ]; then
     # Show the above ASCII art
     art
 fi
