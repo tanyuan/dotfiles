@@ -9,7 +9,15 @@
 "  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 "                 |___/
 
-" Load plugins
+" For Chinese Input Users:
+" Change to English input method automatically when going from Insert mode to Normal mode
+if has('mac')
+    source ~/.vim/mac/smartim.vim
+elseif has('unix')
+    source ~/.vim/linux/fcitx.vim
+endif
+
+" Load plugins in ~/.vim/plugin/
 filetype plugin on
 
 " Turn on syntax highlighting
@@ -100,8 +108,6 @@ nmap , :set relativenumber!<CR>
 
 " LEADER KEY
 " This is where we can map any key we like without worrying conflicts with Vim's default
-" Leader c is used by plugin NERD Commenter
-" Leader d is used by plugin DrawIt
 
 " Map Space to Leader
 let mapleader=" "
