@@ -2,7 +2,6 @@
 
 " Vim Config by tanyuan
 " =====================
-" http://github.com/tanyuan/vim-config
 "  _
 " | |_ __ _ _ __  _   _ _   _  __ _ _ __
 " | __/ _` | '_ \| | | | | | |/ _` | '_ \
@@ -14,20 +13,16 @@
 filetype plugin on
 
 " Turn on syntax highlighting
-syntax on
+" syntax on
 
 " Use color scheme from ~/.vim/color/
-colorscheme monochrome
+" colorscheme monochrome
 
 " Show the keystrokes being entered in the screen
 set showcmd
 
 " Show line numbers
 set number
-
-" Set status line with vim-fugitive plugin to show git branch
-" Status line won't show up if only one window
-set statusline=%<%f\ %{fugitive#statusline()}\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " Enable switching buffers with unsaved changes
 set hidden
@@ -53,7 +48,7 @@ set tags+=tags;/
 set linebreak
 " Smart wrapping according to indentation 
 " Does not work on Mac
-"set breakindent
+" set breakindent
 
 " Indentation
 set autoindent " Auto indention based on the line above
@@ -94,9 +89,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-" Toggle comment by Ctrl-/
-map <C-_> <plug>NERDCommenterToggle
-" Crtl-\ is mapped to plugin closetag.vim by me to solve conflict (default C-_)
 
 " CUSTOMIZATION KEY
 " Some keys left for remapping: , \ Space
@@ -136,23 +128,6 @@ nnoremap <Leader>j :m .+1<CR>==
 nnoremap <Leader>k :m .-2<CR>==
 vnoremap <Leader>j :m '>+1<CR>gv=gv
 vnoremap <Leader>k :m '<-2<CR>gv=gv
-" Insert Bash script beginning
-nmap <Leader>b :r ~/Templates/bash.sh<CR>ggdd
-
-" fugitive git bindings
-nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gl :Glog<CR>
-nnoremap <Leader>gc :Gcommit<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>ge :Gedit<Space>
-nnoremap <Leader>gr :Gread<CR>
-nnoremap <Leader>gw :Gwrite<CR><CR>
-nnoremap <Leader>gp :Ggrep<Space>
-nnoremap <Leader>gm :Gmove<Space>
-nnoremap <Leader>gb :Git branch<Space>
-nnoremap <Leader>go :Git checkout<Space>
-nnoremap <Leader>gps :Dispatch! git push<CR>
-nnoremap <Leader>gpl :Dispatch! git pull<CR>
 
 " Remember last cursor position
 augroup resCur
@@ -186,28 +161,3 @@ if v:version >= 700
     autocmd BufLeave * call AutoSaveWinView()
     autocmd BufEnter * call AutoRestoreWinView()
 endif
-
-" For the most accurate highlighting (for mixed code in HTML) but slowest
-autocmd BufEnter * :syntax sync fromstart
-
-" MARKDOWN
-" Use GitHub-flavored Markdown syntax highlighting by default for .md files
-augroup markdown
-    au!
-    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
-" Use 2 space indent 
-autocmd FileType ghmarkdown setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" Markdown auto folding by headers
-function! MarkdownLevel()
-    let h = matchstr(getline(v:lnum), '^#\+')
-        if empty(h)
-            return "="
-        else
-            return ">" . len(h)
-        endif
-endfunction
-au BufEnter *.md setlocal foldexpr=MarkdownLevel()  
-au BufEnter *.md setlocal foldmethod=expr 
-" Expand folds when open files 
-au BufEnter *.md setlocal foldlevel=20
