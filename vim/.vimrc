@@ -52,6 +52,8 @@ set undodir=~/.vim/undo//
 " Read tags from file 'tags' and search all the way to root
 set tags+=tags;/
 
+" Solve Backspace not working
+set backspace=2
 " Set smart line break: not to break words
 set linebreak
 " Smart wrapping according to indentation 
