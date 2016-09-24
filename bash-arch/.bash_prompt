@@ -1,0 +1,27 @@
+# ~/.bash_prompt
+
+# Bash Prompt for Arch Linux by tanyuan
+# =====================================
+#  _
+# | |_ __ _ _ __  _   _ _   _  __ _ _ __
+# | __/ _` | '_ \| | | | | | |/ _` | '_ \
+# | || (_| | | | | |_| | |_| | (_| | | | |
+#  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
+#                 |___/
+
+# Show git branch in prompt
+. ~/.git-prompt.sh
+# Git command completion
+. ~/.git-completion.bash
+
+# > directory (git-branch*^)$
+#PS1='\[\e[0;32m\]> \w $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
+export GIT_PS1_SHOWDIRTYSTATE=1
+PS1='\[\e[0;32m\]> \w $(__git_ps1 "(%s)")$\[\e[m\] '
+# Trim prompt directory to 2 levels
+PROMPT_DIRTRIM=2
+
+# Always check window size
+shopt -s checkwinsize
+# Open terminal new tab/window in the same directory
+. /etc/profile.d/vte.sh
