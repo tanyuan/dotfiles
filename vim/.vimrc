@@ -21,7 +21,7 @@ endif
 filetype plugin on
 
 " Turn on syntax highlighting
-" syntax on
+syntax on
 
 " Use color scheme from ~/.vim/color/
 " colorscheme monochrome
