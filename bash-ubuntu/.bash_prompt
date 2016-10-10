@@ -9,6 +9,9 @@
 #  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 #                 |___/
 
+# Used to identify machine (different themes)
+export MACHINE=ubuntu
+
 # Show git branch in prompt
 . ~/.git-prompt.sh
 # Git command completion

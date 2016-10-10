@@ -24,7 +24,10 @@ filetype plugin on
 syntax on
 
 " Use color scheme from ~/.vim/color/
-" colorscheme monochrome
+if $MACHINE == 'ubuntu'
+    " Ubuntu default theme
+    colorscheme ron
+endif
 
 " Show the keystrokes being entered in the screen
 set showcmd
