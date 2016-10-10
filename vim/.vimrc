@@ -39,7 +39,7 @@ set hidden
 set mouse=a
 
 " Sync to system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Where to store swap (.swp) files, rather than beside the file
 " // will save the full path name to ensure uniqueness
