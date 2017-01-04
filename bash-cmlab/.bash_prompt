@@ -9,6 +9,9 @@
 #  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 #                 |___/
 
+# Used to identify machine (different themes)
+export MACHINE=cmlab
+
 art() {
     # Set terminal font color
     tput setaf 3
