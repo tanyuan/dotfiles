@@ -9,6 +9,8 @@
 #  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 #                 |___/
 
+PATH=~/bin:$PATH
+
 # Default editor
 export EDITOR=vim
 export VISUAL=vim
