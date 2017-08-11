@@ -1,7 +1,5 @@
 # dotfiles
 
-For Linux and Mac.
-
 ```
  ________________________________________
 / The most beautiful things in the world \
@@ -23,6 +21,7 @@ For Linux and Mac.
 4. **Vim**: `~/.vimrc`, `~/.vim/` needs to have `~/.vim/swap/` and `~/.vim/undo/`.
 5. **Emacs**: `~/.emacs.d/` needs to have `~/.emacs.d/backup/`.
 6. **Ranger**: `~/.config/ranger/`.
+7. **Fish**: `~/.config/fish/`. Add `exec fish` at the end of `.bash_aliases` to use fish shell.
 
 ## How to deploy
 
@@ -35,9 +34,3 @@ cd ~/dotfiles
 
 stow bash
 ```
-
-## More
-
-* Trash can in command line: install `trash-cli` or [create an alias](https://gist.github.com/tanyuan/804ac5a568ab1f56093054147b553767). 
-
-* [Smart Caps Lock for Vim and Emacs](https://gist.github.com/tanyuan/55bca522bf50363ae4573d4bdcf06e2e).
