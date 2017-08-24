@@ -22,8 +22,6 @@ GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Append history instead of rewriting it
 shopt -s histappend
-# Store history immediately rather than session ends
-PROMPT_COMMAND='history -a'
 # Ignore duplicates and commands start with space
 HISTCONTROL=ignoreboth
 # Ignore specific commands
@@ -38,14 +36,19 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux Only
     # ls: show colors and symbols
     alias l='ls -F --color=auto'
+    # ls: show details with hidden files
+    alias ll='ls -alh'
+    # Store history immediately rather than session ends
+    # Conflict with terminal title in Mac
+    PROMPT_COMMAND='history -a'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OS Only
     # ls: show colors and symbols
     alias l='ls -FG'
+    # ls: show details with hidden files
+    alias ll='ls -alFG'
 fi
 
-# ls: show details with hidden files
-alias ll='ls -alh'
 # Ask before remove (disable by -f force)
 # use `trash` (trach-cl) instead to move to trash can
 alias rm='rm -i'
@@ -66,8 +69,6 @@ alias gcc='gcc -fdiagnostics-color'
 
 # Go to desktop
 alias d='cd ~/Desktop'
-# Go to Dropbox
-alias D='cd ~/Dropbox'
 
 # Bash Prompt
 if [ -f ~/.bash_prompt ]; then
