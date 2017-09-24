@@ -9,25 +9,11 @@
 "  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 "                 |___/
 
-" For Chinese Input Users:
-" Change to English input method automatically when going from Insert mode to Normal mode
-if has('mac')
-    source ~/.vim/mac/smartim.vim
-elseif has('unix')
-    source ~/.vim/linux/fcitx.vim
-endif
-
 " Load plugins in ~/.vim/plugin/
 filetype plugin on
 
 " Turn on syntax highlighting
 syntax on
-
-" Use color scheme from ~/.vim/color/
-if $MACHINE == 'ubuntu'
-    " Ubuntu default theme
-    colorscheme ron
-endif
 
 " Show the keystrokes being entered in the screen
 set showcmd
@@ -42,7 +28,7 @@ set hidden
 set mouse=a
 
 " Sync to system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Where to store swap (.swp) files, rather than beside the file
 " // will save the full path name to ensure uniqueness
