@@ -51,7 +51,7 @@ fi
 
 # Ask before remove (disable by -f force)
 # use `trash` (trach-cl) instead to move to trash can
-alias rm='rm -i'
+#alias rm='rm -i'
 # Run last command again with sudo
 alias please='sudo `fc -ln -1`'
 # vim
