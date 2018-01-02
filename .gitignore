@@ -3,6 +3,8 @@ vim/.vim/swap/*
 vim/.vim/undo/*
 vim/.vim/view/*
 vim/.vim/.netrwhist
+# Vim plugins (vim-plug)
+vim/.vim/plugged/*
 
 # Emacs
 emacs/.emacs.d/elpa/archives/*

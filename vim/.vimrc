@@ -108,9 +108,9 @@ nmap <Leader>r :source ~/.vimrc<CR>
 nmap <Leader>w :w<CR>
 " Quick quit
 nmap <Leader>q :q<CR>
-" Toggle Tab/Space by Ctrl+t
+" Toggle Tab/Space
 nmap <Leader>t :set expandtab!<CR>
-" Toggle highlight search by Ctrl+h
+" Toggle highlight search
 nmap <Leader>s :set hlsearch!<CR>
 " Horizontal split
 nmap <Leader>h :sp<CR>
@@ -158,3 +158,32 @@ if v:version >= 700
     autocmd BufLeave * call AutoSaveWinView()
     autocmd BufEnter * call AutoRestoreWinView()
 endif
+
+" Set the title of the Terminal to the currently open file
+function! SetTerminalTitle()
+    let titleString = expand('%:t')
+    if len(titleString) > 0
+        let &titlestring = expand('%:t')
+        " this is the format iTerm2 expects when setting the window title
+        let args = "\033];".&titlestring."\007"
+        let cmd = 'silent !echo -e "'.args.'"'
+        execute cmd
+        redraw!
+    endif
+endfunction
+autocmd BufEnter * call SetTerminalTitle()
+
+" PLUGIN MANAGER
+" vim-plug (.vim/autoload/plug..vim)
+" Run :PlugInstall to install plugins
+call plug#begin()
+
+" The NERD Commenter: Add comment shortcuts
+" Usage: Toggle comment <leader>c<space>
+Plug 'scrooloose/nerdcommenter'
+" sleuth.vim: Automatically detect and change indent settings
+Plug 'tpope/vim-sleuth'
+" vim-gitgutter: Shows git diff in the sign column
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
