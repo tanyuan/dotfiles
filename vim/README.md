@@ -11,7 +11,6 @@ Must create these directories before use (specified in .vimrc):
 -----
 
 * Single tap for commands: `;` triggers `:`.
-* Single tap for the register: `'` triggers `"`.
 * `Space` as leader.
   * `<leader>w` to write.
   * `<leader>q` to quit.
@@ -40,3 +39,11 @@ Run `:PlugInstall` to install plugins at `.vim/plugged/`.
   * Usage: `ctrl-p` to open the finder.
 * [NERD Tree](https://github.com/airblade/scrooloose/nerdtree) - Show file tree sidebar. Only load when first first invocation of NERDTreeToggle command.
   * Usage: `ctrl-n` is mapped in .vimrc to toggle.
+
+Cheatsheets
+-----
+
+Some vim built-in usages:
+
+* Autocomplete: `ctrl-p` `ctrl-n`
+* Move to last cursor position: ```` or `''` or `ctrl-i` `ctrl-o`

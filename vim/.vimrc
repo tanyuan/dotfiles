@@ -85,8 +85,6 @@ set softtabstop=4 " Makes backspace treat 4 spaces like a tab
 " Single tap to trigger command-line
 nnoremap ; :
 vnoremap ; :
-" Single tap to trigger register
-nnoremap ' "
 
 " Don't use arrow keys.
 " Move cursor by display lines when wrapping
