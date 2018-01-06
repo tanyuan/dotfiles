@@ -40,10 +40,10 @@ Run `:PlugInstall` to install plugins at `.vim/plugged/`.
 * [NERD Tree](https://github.com/airblade/scrooloose/nerdtree) - Show file tree sidebar. Only load when first first invocation of NERDTreeToggle command.
   * Usage: `ctrl-n` is mapped in .vimrc to toggle.
 
-Cheatsheets
+Cheatsheet
 -----
 
 Some vim built-in usages:
 
 * Autocomplete: `ctrl-p` `ctrl-n`
-* Move to last cursor position: ```` or `''` or `ctrl-i` `ctrl-o`
+* Move to last cursor position: `''` or `ctrl-i` `ctrl-o`
