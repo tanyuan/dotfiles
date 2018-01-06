@@ -36,5 +36,7 @@ Run `:PlugInstall` to install plugins at `.vim/plugged/`.
   * Usage: Toggle comment `<leader>c<space>`
 * [sleuth.vim](https://github.com/tpope/vim-sleuth) - Automatically detect and change indent settings.
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - Shows git diff in the sign column.
-* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) - Ctrl-p to open other files using fuzzy finder.
-* [NERD Tree](https://github.com/airblade/scrooloose/nerdtree) - Show file tree sidebar. Only load when first first invocation of NERDTreeToggle command. `ctrl-n` is mapped in .vimrc to toggle.
+* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) - Open other files using fuzzy finder.
+  * Usage: `ctrl-p` to open the finder.
+* [NERD Tree](https://github.com/airblade/scrooloose/nerdtree) - Show file tree sidebar. Only load when first first invocation of NERDTreeToggle command.
+  * Usage: `ctrl-n` is mapped in .vimrc to toggle.
