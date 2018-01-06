@@ -28,11 +28,13 @@ Must create these directories before use (specified in .vimrc):
 
 Plugins
 -----
-Plugins are managed through [vim-plug](https://github.com/junegunn/vim-plug) (see last part of .vimrc).
+Plugins are managed through [vim-plug](https://github.com/junegunn/vim-plug).
 
 Run `:PlugInstall` to install plugins at `.vim/plugged/`.
 
-* [The NERD Commenter](https://github.com/scrooloose/nerdcommenter) - Add comment shortcuts
+* [The NERD Commenter](https://github.com/scrooloose/nerdcommenter) - Add comment shortcuts.
   * Usage: Toggle comment `<leader>c<space>`
-* [sleuth.vim](https://github.com/tpope/vim-sleuth) - Automatically detect and change indent settings
-* [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - Shows git diff in the sign column
+* [sleuth.vim](https://github.com/tpope/vim-sleuth) - Automatically detect and change indent settings.
+* [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - Shows git diff in the sign column.
+* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) - Ctrl-p to open other files using fuzzy finder.
+* [NERD Tree](https://github.com/airblade/scrooloose/nerdtree) - Show file tree sidebar. Only load when first first invocation of NERDTreeToggle command. `ctrl-n` is mapped in .vimrc to toggle.

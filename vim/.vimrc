@@ -9,8 +9,30 @@
 "  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 "                 |___/
 
-" Load plugins in ~/.vim/plugin/
-filetype plugin on
+" PLUGIN MANAGER
+" vim-plug (.vim/autoload/plug..vim)
+" Run :PlugInstall to install plugins
+call plug#begin()
+
+" The NERD Commenter: Add comment shortcuts
+" Usage: Toggle comment <leader>c<space>
+Plug 'scrooloose/nerdcommenter'
+" sleuth.vim: Automatically detect and change indent settings
+Plug 'tpope/vim-sleuth'
+" vim-gitgutter: Shows git diff in the sign column
+Plug 'airblade/vim-gitgutter'
+" ctrlp.vim: Ctrl-P to open other files using fuzzy finder
+Plug 'ctrlpvim/ctrlp.vim'
+" NERD Tree: Show file tree sidebar. Only load when first first invocation of NERDTreeToggle command
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+call plug#end()
+
+" PLUGIN KEY MAPPINGS
+" NERD Tree
+nmap <C-n> :NERDTreeToggle<CR>
+
+" CONFIGS
 
 " Turn on syntax highlighting
 syntax on
@@ -172,18 +194,3 @@ function! SetTerminalTitle()
     endif
 endfunction
 autocmd BufEnter * call SetTerminalTitle()
-
-" PLUGIN MANAGER
-" vim-plug (.vim/autoload/plug..vim)
-" Run :PlugInstall to install plugins
-call plug#begin()
-
-" The NERD Commenter: Add comment shortcuts
-" Usage: Toggle comment <leader>c<space>
-Plug 'scrooloose/nerdcommenter'
-" sleuth.vim: Automatically detect and change indent settings
-Plug 'tpope/vim-sleuth'
-" vim-gitgutter: Shows git diff in the sign column
-Plug 'airblade/vim-gitgutter'
-
-call plug#end()
