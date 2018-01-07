@@ -9,6 +9,7 @@
 #  \__\__,_|_| |_|\__, |\__,_|\__,_|_| |_|
 #                 |___/
 
+# Add custom shell scripts
 PATH=~/bin:$PATH
 
 # Default editor
@@ -51,7 +52,7 @@ fi
 
 # Ask before remove (disable by -f force)
 # use `trash` (trach-cl) instead to move to trash can
-#alias rm='rm -i'
+alias rm='rm -i'
 # Run last command again with sudo
 alias please='sudo `fc -ln -1`'
 # vim
@@ -73,9 +74,4 @@ alias d='cd ~/Desktop'
 # Bash Prompt
 if [ -f ~/.bash_prompt ]; then
     source ~/.bash_prompt
-fi
-
-# Add custom bash aliases at ~/.bash_aliases
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
 fi

@@ -18,3 +18,16 @@ source ~/.git-completion.bash
 #PS1='\[\e[0;32m\]> \w $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
 export GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\[\e[0;32m\]> \W $(__git_ps1 "(%s)")$\[\e[m\] '
+
+# iTerm tab title
+if [ $ITERM_SESSION_ID ]; then
+  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+fi
+
+# fzf
+# Usage: Ctrl-R, Ctrl-T
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# autojump
+# Usage: j dir
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
