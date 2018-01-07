@@ -2,20 +2,10 @@
 vim/.vim/swap/*
 vim/.vim/undo/*
 vim/.vim/view/*
-vim/.vim/.netrwhist
-# Vim plugins (vim-plug)
 vim/.vim/plugged/*
-
-# Emacs
-emacs/.emacs.d/elpa/archives/*
-emacs/.emacs.d/url/*
-emacs/.emacs.d/auto-save-list/*
-emacs/.emacs.d/backup/*
-emacs/.emacs.d/image-dired/*
-emacs/.emacs.d/var/*
-emacs/.emacs.d/saved-places
-emacs/.emacs.d/bookmarks
-emacs/.emacs.d/projectile*
+vim/.vim/.netrwhist
 
 # Ranger
 ranger/.config/ranger/history
+ranger/.config/ranger/bookmarks
+ranger/.config/ranger/tagged
