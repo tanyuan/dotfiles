@@ -16,8 +16,8 @@ Must create these directories before use (specified in .vimrc):
 * `Space` as leader.
   * `<leader>w` to write.
   * `<leader>q` to quit.
-  * `<leader>v` to vertical split.
-  * `<leader>h` to horizontal split.
+  * `<leader>-` to horizontal split. (Hyphen key is horizontal)
+  * `<leader>\` to vertical split. (Pipe key is vertical)
   * `<leader>p` to paste in new line.
   * `<leader>s` to toggle search highlight.
   * `<leader>t` to toggle Tab/Space indentation.

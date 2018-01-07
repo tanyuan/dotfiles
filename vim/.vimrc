@@ -133,9 +133,9 @@ nmap <Leader>t :set expandtab!<CR>
 " Toggle highlight search
 nmap <Leader>s :set hlsearch!<CR>
 " Horizontal split
-nmap <Leader>h :sp<CR>
+nmap <Leader>- :sp<CR>
 " Vertical split
-nmap <Leader>v :vs<CR>
+nmap <Leader>\ :vs<CR>
 " Put in new line
 nmap <Leader>p o<Esc>p
 " Enter new line with additional blank line below
