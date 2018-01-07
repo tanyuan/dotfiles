@@ -17,11 +17,10 @@
 
 1. **Bash**: `~/.bashrc` and `bash-*` for machine specific configs
 2. **Git**: create `~/.gitconfig`
-3. **Tmux**: `~/.tmux.conf`
-4. **Vim**: `~/.vimrc`, `~/.vim/` needs to have `~/.vim/swap/` and `~/.vim/undo/`
-5. **Emacs**: `~/.emacs.d/` needs to have `~/.emacs.d/backup/`
-6. **Ranger**: `~/.config/ranger/`
-7. **Fish**: `~/.config/fish/` add `exec fish` at the end of `.bash_prompt`
+3. **Vim**: `~/.vimrc`, `~/.vim/` needs to create `~/.vim/swap/` and `~/.vim/undo/`
+4. **Tmux**: `~/.tmux.conf`
+5. **Ranger**: `~/.config/ranger/`
+6. **Fish**: `~/.config/fish/` add `exec fish` at the end of `.bash_prompt`
 
 ## How to deploy
 
