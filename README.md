@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles by tanyuan
 
 ```
  ________________________________________
@@ -15,13 +15,13 @@
 ..............................
 ```
 
-1. **Bash**: `~/.bashrc` with personal aliases in `~/.bash_aliases`. Use `bash-*` for machine specific configs.
-2. **Git**: Create `~/.gitconfig`.
-3. **Tmux**: `~/.tmux.conf`.
-4. **Vim**: `~/.vimrc`, `~/.vim/` needs to have `~/.vim/swap/` and `~/.vim/undo/`.
-5. **Emacs**: `~/.emacs.d/` needs to have `~/.emacs.d/backup/`.
-6. **Ranger**: `~/.config/ranger/`.
-7. **Fish**: `~/.config/fish/`. Add `exec fish` at the end of `.bash_aliases` to use fish shell.
+1. **Bash**: `~/.bashrc` and `bash-*` for machine specific configs
+2. **Git**: create `~/.gitconfig`
+3. **Tmux**: `~/.tmux.conf`
+4. **Vim**: `~/.vimrc`, `~/.vim/` needs to have `~/.vim/swap/` and `~/.vim/undo/`
+5. **Emacs**: `~/.emacs.d/` needs to have `~/.emacs.d/backup/`
+6. **Ranger**: `~/.config/ranger/`
+7. **Fish**: `~/.config/fish/` add `exec fish` at the end of `.bash_prompt`
 
 ## How to deploy
 
