@@ -1,3 +1,0 @@
-[submodule "emacs/.emacs.d/themes/minimal-theme"]
-	path = emacs/.emacs.d/themes/minimal-theme
-	url = https://github.com/tanyuan/minimal-theme.el.git
