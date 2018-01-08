@@ -21,8 +21,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-sleuth'
 " vim-gitgutter: Shows git diff in the sign column
 Plug 'airblade/vim-gitgutter'
-" ctrlp.vim: Ctrl-P to open other files using fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
 " NERD Tree: Show file tree sidebar. Only load when first first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
@@ -179,16 +177,24 @@ if v:version >= 700
     autocmd BufEnter * call AutoRestoreWinView()
 endif
 
-" Set the title of the Terminal to the currently open file
-function! SetTerminalTitle()
-    let titleString = expand('%:t')
-    if len(titleString) > 0
-        let &titlestring = expand('%:t')
-        " this is the format iTerm2 expects when setting the window title
-        let args = "\033];".&titlestring."\007"
-        let cmd = 'silent !echo -e "'.args.'"'
-        execute cmd
-        redraw!
-    endif
-endfunction
-autocmd BufEnter * call SetTerminalTitle()
+" iTerm on Mac
+if $TERM_PROGRAM =~ "iTerm"
+  " Set the title of the Terminal to the currently open file
+  function! SetTerminalTitle()
+      let titleString = expand('%:t')
+      if len(titleString) > 0
+          let &titlestring = expand('%:t')
+          " this is the format iTerm2 expects when setting the window title
+          let args = "\033]1;📄".&titlestring."\007"
+          let cmd = 'silent !echo -e "'.args.'"'
+          execute cmd
+          redraw!
+      endif
+  endfunction
+  autocmd BufEnter * call SetTerminalTitle()
+
+  " Change cursor shape according to mode
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+  let &t_SR = "\<esc>]50;CursorShape=2\x7" " Underline in replace mode
+endif

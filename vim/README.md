@@ -37,8 +37,6 @@ Run `:PlugInstall` to install plugins at `.vim/plugged/`.
   * Usage: Toggle comment `<leader>c<space>`
 * [sleuth.vim](https://github.com/tpope/vim-sleuth) - Automatically detect and change indent settings in current file.
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter) - Shows git diff in the sign column.
-* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) - Open other files using fuzzy finder.
-  * Usage: `ctrl-p` to open the finder.
 * [NERD Tree](https://github.com/airblade/scrooloose/nerdtree) (On-demand loading) - Show file tree sidebar.
   * Usage: `ctrl-n` is mapped in .vimrc to load.
 
@@ -48,3 +46,4 @@ Some vim built-in usages:
 
 * Autocomplete: `ctrl-p` `ctrl-n`
 * Move to last cursor position: `''` or `ctrl-i` `ctrl-o`
+* Show current file name: `ctrl-g`, show full path: `1 ctrl-g`
