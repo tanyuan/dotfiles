@@ -19,9 +19,11 @@ source ~/.git-completion.bash
 export GIT_PS1_SHOWDIRTYSTATE=1
 PS1='\[\e[0;32m\]> \W $(__git_ps1 "(%s)")$\[\e[m\] '
 
-# iTerm tab title
+# Set iTerm tab and window title
 if [ $ITERM_SESSION_ID ]; then
-  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+  # Set tab title to current directory and set window title to full path
+  # the $PROMPT_COMMAND environment variable is executed every time a command is run
+  export PROMPT_COMMAND='echo -ne "\033]1;${PWD##*/}\007" && echo -ne "\033]2;${PWD}\007"; ':"$PROMPT_COMMAND";
 fi
 
 # fzf
