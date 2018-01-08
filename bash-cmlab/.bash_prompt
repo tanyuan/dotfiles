@@ -43,6 +43,8 @@ PS1='\[\e[0;36m\]> \u@\h: \w $(__git_ps1 "(%s)")$\[\e[m\] '
 # Trim prompt directory to 2 levels
 PROMPT_DIRTRIM=2
 
+export PROMPT_COMMAND="echo -ne '\033]0;${USER}@${HOSTNAME}\007';$PROMPT_COMMAND"
+
 # Custom trash
 trash() {
     mv $1 ~/.Trash/
