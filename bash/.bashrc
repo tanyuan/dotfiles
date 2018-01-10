@@ -47,7 +47,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # ls: show colors and symbols
     alias l='ls -FG'
     # ls: show details with hidden files
-    alias ll='ls -alFG'
+    alias ll='ls -alhFG'
 fi
 
 # Ask before remove (disable by -f force)
