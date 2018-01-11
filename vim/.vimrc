@@ -50,7 +50,7 @@ set mouse=a
 " Sync to system clipboard
 if has("unix")
   let s:uname = system("uname -s")
-  if s:uname == "Darwin"
+  if s:uname == "Darwin\n"
     " For Mac
     set clipboard=unnamed
   else
