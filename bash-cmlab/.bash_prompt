@@ -39,10 +39,11 @@ fi
 # > directory (git-branch*^)$
 #PS1='\[\e[0;32m\]> \w $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
 export GIT_PS1_SHOWDIRTYSTATE=1
-PS1='\[\e[0;36m\]> \u@\h: \w $(__git_ps1 "(%s)")$\[\e[m\] '
+PS1='\[\e[0;36m\]> \u@\h: \w \[\e[m\] $(__git_ps1 "(%s)")\$ '
 # Trim prompt directory to 2 levels
 PROMPT_DIRTRIM=2
 
+# Set iTerm2 title
 export PROMPT_COMMAND="echo -ne '\033]0;${USER}@${HOSTNAME}\007';$PROMPT_COMMAND"
 
 # Custom trash
