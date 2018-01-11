@@ -48,7 +48,16 @@ set hidden
 set mouse=a
 
 " Sync to system clipboard
-set clipboard=unnamed
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin"
+    " For Mac
+    set clipboard=unnamed
+  else
+    " For Linux X windows (install vim-gtk)
+    set clipboard=unnamedplus
+  endif
+endif
 
 " Where to store swap (.swp) files, rather than beside the file
 " // will save the full path name to ensure uniqueness
