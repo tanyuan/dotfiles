@@ -26,41 +26,39 @@ shopt -s histappend
 # Ignore duplicates and commands start with space
 HISTCONTROL=ignoreboth
 # Ignore specific commands
-HISTIGNORE='ls:l:ll:f:bg:fg:history'
+HISTIGNORE='ls:l:ll:la:f:bg:fg:history'
 # Larger history file
-HISTFILESIZE=100000
-HISTSIZE=100000
+HISTFILESIZE=2000
+HISTSIZE=1000
 
 # Basic aliases
 
+# Color commands
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux Only
-    # ls: show colors and symbols
-    alias l='ls -F --color=auto'
-    # ls: show details with hidden files
-    alias ll='ls -alh'
-    # Store history immediately rather than session ends
-    # Conflict with terminal title in Mac
-    PROMPT_COMMAND='history -a'
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OS Only
-    # ls: show colors and symbols
-    alias l='ls -FG'
-    # ls: show details with hidden files
-    alias ll='ls -alFG'
+    alias ls='ls -G'
 fi
 
+# List aliases
+alias ll='ls -alhF'
+alias la='ls -AF'
+alias l='ls -CF'
+
 # Ask before remove (disable by -f force)
-# use `trash` (trach-cl) instead to move to trash can
+# use `trash` (install trach-cli) instead to move to trash can
 alias rm='rm -i'
 # Run last command again with sudo
 alias please='sudo `fc -ln -1`'
 # vim
 alias vi='vim'
-# grep: turn on color and line number
-alias grep='grep --color=auto -n'
-# pdfgrep: show page number 
-alias pdfgrep='pdfgrep -n'
+# grep: show line number
+alias grep='grep -n'
 # tree: show color and symbols
 alias tree='tree -CF'
 # watch: show color
