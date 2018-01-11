@@ -25,8 +25,6 @@ GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 shopt -s histappend
 # Ignore duplicates and commands start with space
 HISTCONTROL=ignoreboth
-# Ignore specific commands
-HISTIGNORE='ls:l:ll:la:f:bg:fg:history'
 # Larger history file
 HISTFILESIZE=2000
 HISTSIZE=1000
