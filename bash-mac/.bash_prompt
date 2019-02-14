@@ -31,6 +31,8 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 # Python
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # fzf
 # Usage: Ctrl-R, Ctrl-T

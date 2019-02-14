@@ -77,6 +77,8 @@ set linebreak
 " Smart wrapping according to indentation 
 " Does not work on Mac
 " set breakindent
+" Show last line of the text instead of @
+set display+=lastline
 
 " Indentation
 set autoindent " Auto indention based on the line above
@@ -88,6 +90,10 @@ set softtabstop=4 " Makes backspace treat 4 spaces like a tab
 " ABOUT KEY MAPPING
 " `nore` means no recursive
 " always use nnoremap instead of nmap
+
+" Map Enter to Esc
+" Use `C-j` to enter a newline or `o` to open new line
+inoremap <CR> <Esc>
 
 " Single tap to trigger command-line
 nnoremap ; :

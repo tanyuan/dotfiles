@@ -16,6 +16,11 @@ PATH=~/bin:$PATH
 export EDITOR=vim
 export VISUAL=vim
 
+# Set UI language for commanline programs
+export LANG="en_US.UTF-8"
+# Set locale for SSH
+export LC_CTYPE="en_US.UTF-8"
+
 # GCC 5.2 color
 GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -32,12 +37,12 @@ HISTSIZE=1000
 # Basic aliases
 
 # Color commands
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux Only
     alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OS Only
     alias ls='ls -G'
