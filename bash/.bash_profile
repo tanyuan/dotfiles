@@ -10,3 +10,4 @@
 #                 |___/
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+export PATH="/usr/local/sbin:$PATH"

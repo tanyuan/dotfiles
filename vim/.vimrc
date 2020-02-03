@@ -24,6 +24,9 @@ Plug 'airblade/vim-gitgutter'
 " NERD Tree: Show file tree sidebar. Only load when first first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
+" language specific
+Plug 'JuliaEditorSupport/julia-vim'
+
 call plug#end()
 
 " PLUGIN KEY MAPPINGS
@@ -93,7 +96,7 @@ set softtabstop=4 " Makes backspace treat 4 spaces like a tab
 
 " Map Enter to Esc
 " Use `C-j` to enter a newline or `o` to open new line
-inoremap <CR> <Esc>
+"inoremap <CR> <Esc>
 
 " Single tap to trigger command-line
 nnoremap ; :
@@ -145,6 +148,8 @@ nmap <Leader>q :q<CR>
 nmap <Leader>t :set expandtab!<CR>
 " Toggle highlight search
 nmap <Leader>s :set hlsearch!<CR>
+" Toggle spelling check
+nmap <Leader>s :set spell!<CR>
 " Horizontal split
 nmap <Leader>- :sp<CR>
 " Vertical split

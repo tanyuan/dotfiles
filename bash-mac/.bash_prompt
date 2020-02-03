@@ -10,14 +10,15 @@
 #                 |___/
 
 # Show git branch in prompt
-source ~/.git-prompt.sh
+#source ~/.git-prompt.sh
 # Git command completion
-source ~/.git-completion.bash
+#source ~/.git-completion.bash
 
 # > directory (git-branch*^)$
 #PS1='\[\e[0;32m\]> \w $(__git_ps1 "(%s$(git_dirty)$(git_stash))")$\[\e[m\] '
-export GIT_PS1_SHOWDIRTYSTATE=1
-PS1='\[\e[0;32m\]> \W \[\e[m\]$(__git_ps1 "(%s)")\$ '
+#export GIT_PS1_SHOWDIRTYSTATE=1
+#PS1='\[\e[0;32m\]> \W \[\e[m\]$(__git_ps1 "(%s)")\$ '
+PS1='\[\e[0;32m\]\$\[\e[m\] '
 
 # iTerm2 tab and window title
 if [ $ITERM_SESSION_ID ]; then
