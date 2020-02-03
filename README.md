@@ -15,21 +15,25 @@
 ..............................
 ```
 
-1. **Bash**: `~/.bashrc` and `bash-*` for machine specific configs
-2. **Git**: create `~/.gitconfig`
-3. **Vim**: `~/.vimrc`, `~/.vim/` needs to create `~/.vim/swap/` and `~/.vim/undo/`
-4. **Tmux**: `~/.tmux.conf`
-5. **Ranger**: `~/.config/ranger/`
-6. **Fish**: `~/.config/fish/` add `exec fish` at the end of `.bash_prompt`
+0. **zsh**: `.zshrc`
+1. **bash**: `~/.bashrc` and `bash-*` for machine specific configs
+2. **git**: create `~/.gitconfig`
+3. **vim**: `~/.vimrc`, `~/.vim/` needs to create `~/.vim/swap/` and `~/.vim/undo/`
+4. **tmux**: `~/.tmux.conf`
+5. **ranger**: `~/.config/ranger/`
+6. **fish**: `~/.config/fish/` add `exec fish` at the end of `.bash_prompt`
 
-## How to deploy
+## how to deploy
 
-Dotfiles are managed using **GNU Stow**. [How to use GNU Stow](https://gist.github.com/tanyuan/d8ac86407893699e0d2b).
+Dotfiles are managed using **GNU Stow**.
 
 Install one directory at a time:
 
 ```
 cd ~/dotfiles
-
 stow bash
 ```
+
+# how to add 
+
+Just add a new directory and put files you want to be at home directory.
